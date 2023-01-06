@@ -4,16 +4,17 @@
 
 ### Install Opearting System ####
     1.Barmetal
-		2.Cloud Computing
-		3.Virtualiation
-		4.Containeization
+    2.Cloud Computing
+    3.Virtualiation
+    4.Containeization
 
 ### VM vs Container #####
 
 <img src="Container vs VM.jpg">
 <img src="Container vs VM1.jpg">
-#### Docker Architecture ####
 
+#### Docker Architecture ####
+<img src="Docker Architecture.jpg">
 ###  Docker Install ####
 ```
   [root@ip-172-31-87-240 ~]# yum install docker 
