@@ -17,7 +17,7 @@
 ###  Docker Install ####
 ```
   [root@ip-172-31-87-240 ~]# yum install docker 
-Failed to set locale, defaulting to C
+Filed to set locale, defaulting to C
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
 Resolving Dependencies
 --> Running transaction check
