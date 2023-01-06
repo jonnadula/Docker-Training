@@ -10,7 +10,7 @@
 
 ### VM vs Container #####
 
-
+<img src="Container vs VM.jpg">
 
 #### Docker Architecture ####
 
