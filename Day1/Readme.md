@@ -1,6 +1,5 @@
 ### Opearting System ###
 <img src="os.png">
-
 ### Install Opearting System ####
     1.Barmetal
 		2.Cloud Computing
