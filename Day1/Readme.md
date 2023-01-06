@@ -1,5 +1,6 @@
 ### vm vs container 
 
+<img src="os.png">
 ```
   [root@ip-172-31-87-240 ~]# yum install docker 
 Failed to set locale, defaulting to C
