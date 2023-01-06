@@ -1,6 +1,18 @@
-### vm vs container 
-
+### Opearting System ###
 <img src="os.png">
+### Install Opearting System ####
+    1.Barmetal
+		2.Cloud Computing
+		3.Virtualiation
+		4.Containeization
+
+### VM vs Container #####
+
+
+
+#### Docker Architecture ####
+
+###  Docker Install ####
 ```
   [root@ip-172-31-87-240 ~]# yum install docker 
 Failed to set locale, defaulting to C
