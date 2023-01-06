@@ -13,8 +13,11 @@
 <img src="Container vs VM.jpg">
 <img src="Container vs VM1.jpg">
 
+### Use Case ####
+
 #### Docker Architecture ####
 <img src="Docker Architecture.jpg">
+
 ###  Docker Install ####
 ```
   [root@ip-172-31-87-240 ~]# yum install docker 
