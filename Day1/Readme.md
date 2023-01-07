@@ -225,6 +225,15 @@ Error response from daemon: You cannot remove a running container 8d16b59e438835
 [srini@master ~]$ docker ps
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 [srini@master ~]$
+
+[srini@master ~]$ docker rmi oraclelinux:8.4
+Untagged: oraclelinux:8.4
+Untagged: oraclelinux@sha256:b81d5b0638bb67030b207d28586d0e714a811cc612396dbe3410db406998b3ad
+Deleted: sha256:97e22ab49eea70a5d500e00980537605d56f30f9614b3a6d6c4ae9ddbd642489
+Deleted: sha256:2d3586eacb6130164c56b62fe181ddc8e324a4442c13b3fd19f6c327f002dfbe
+[srini@master ~]$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[srini@master ~]$
 ```
 
 
