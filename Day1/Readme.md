@@ -249,6 +249,7 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 		.dockerignore  
 		.docker
 	9.Docker commands are written in upper case,Args in lower case
-	<img src="DockerFile.jpg"/>
 ```
+<img src="DockerFile.jpg"/>
+
 
