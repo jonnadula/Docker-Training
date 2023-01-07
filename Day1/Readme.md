@@ -236,4 +236,19 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 [srini@master ~]$
 ```
 
+### Docker File ###
+```
+        1.Dockerfile is a configuration file that contains instructions for building a Docker image
+	2.Provides a more effective way to build images compared to using docker commit
+	3.Dockerfile is a text file with a series of commands in it
+	4.Dockerfile is doesn’t have any extension(DockerFile)
+	5.Docker File executed using docker build command
+	6.One dockerfile per image 
+	7.Multiple .dockerIgnore files can exist, all of them are executed
+	8.Two kind of files
+		.dockerignore  
+		.docker
+	9.Docker commands are written in upper case,Args in lower case
+	<img src="DockerFile.jpg"/>
+```
 
