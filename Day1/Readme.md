@@ -6,6 +6,8 @@
 
 <img src="Container vs VM1.jpg"/>
 
+### Use Case ###
+
 ### Docker Architecture ##
 
 <img src="Docker Architecture.jpg"/>
