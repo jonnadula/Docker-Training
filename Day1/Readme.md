@@ -213,3 +213,18 @@ abc.txt  def.txt
 abc.txt  bin  boot  def.txt  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 [root@8d16b59e4388 /]#
 ``` 
+
+### Remove Container and Remove Image ####
+```
+[srini@master ~]$ docker rm 8d16b59e4388
+Error response from daemon: You cannot remove a running container 8d16b59e4388355237c1d99dcd0f95abad1f9f6732de50db2af6916d795f9d5f. Stop the container before attempting removal or force remove
+[srini@master ~]$ docker stop 8d16b59e4388
+8d16b59e4388
+[srini@master ~]$ docker rm 8d16b59e4388
+8d16b59e4388
+[srini@master ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[srini@master ~]$
+```
+
+
