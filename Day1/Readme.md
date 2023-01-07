@@ -265,6 +265,14 @@ d3f3b79b6ba5   webtest   0.12%     26.5MiB / 3.682GiB   0.70%     3.34kB / 13.9k
 ### Container Log ####
 
 
+### Understanding Port Forwarding ###
+Two ways to Connect
+	1.Staci Port (Using -p option)
+	2.Dynamic Port
+Example on Static Port
+
+
+
 #### Docker Volumes ####
 
 
