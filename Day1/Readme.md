@@ -101,3 +101,19 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@master ~]#
 ```
 
+#### Non Root User ###
+       $useradd srini
+       $usermod -aG docker srini
+       $echo "welcome1"  |  passwd srini --stdin  
+```
+[root@master ~]# useradd srini
+[root@master ~]# usermod -aG docker srini
+[root@master ~]# echo "welcome1"  |  passwd srini --stdin
+Changing password for user srini.
+passwd: all authentication tokens updated successfully.
+[root@master ~]#
+```
+
+### Docker Operations ###
+Pulling image from docker hub
+
