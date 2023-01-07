@@ -102,9 +102,6 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 ```
 
 #### Non Root User ###
-       $useradd srini
-       $usermod -aG docker srini
-       $echo "welcome1"  |  passwd srini --stdin  
 ```
 [root@master ~]# useradd srini
 [root@master ~]# usermod -aG docker srini
@@ -116,4 +113,14 @@ passwd: all authentication tokens updated successfully.
 
 ### Docker Operations ###
 Pulling image from docker hub
-
+```
+[srini@master ~]$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[srini@master ~]$ docker  pull oraclelinux:8.4
+8.4: Pulling from library/oraclelinux
+a4df6f21af84: Pull complete
+Digest: sha256:b81d5b0638bb67030b207d28586d0e714a811cc612396dbe3410db406998b3ad
+Status: Downloaded newer image for oraclelinux:8.4
+docker.io/library/oraclelinux:8.4
+[srini@master ~]$
+```
