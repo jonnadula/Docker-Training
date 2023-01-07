@@ -489,4 +489,7 @@ abc.txt  def
 ```
 
 ### Troubleshooting Docker ###
-
+```
+$docker logs <containername/id>
+$docker inspect <containername/id>
+```
