@@ -252,4 +252,11 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 <img src="DockerFile.jpg"/>
 
+### Check Resources ###
+```
+$docker stats
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT    MEM %     NET I/O           BLOCK I/O   PIDS
+d3f3b79b6ba5   webtest   0.12%     26.5MiB / 3.682GiB   0.70%     3.34kB / 13.9kB   0B / 0B     279
+```
+
 
