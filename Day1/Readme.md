@@ -6,7 +6,7 @@
 
 <img src="Container vs VM1.jpg"/>
 
-### Use Case ###
+### Use Cases ###
 
 ### Docker Architecture ##
 
@@ -122,5 +122,10 @@ a4df6f21af84: Pull complete
 Digest: sha256:b81d5b0638bb67030b207d28586d0e714a811cc612396dbe3410db406998b3ad
 Status: Downloaded newer image for oraclelinux:8.4
 docker.io/library/oraclelinux:8.4
+[srini@master ~]$
+
+[srini@master ~]$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+oraclelinux   8.4       97e22ab49eea   14 months ago   246MB
 [srini@master ~]$
 ```
