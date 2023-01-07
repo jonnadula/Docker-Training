@@ -251,7 +251,50 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 	9.Docker commands are written in upper case,Args in lower case
 ```
 <img src="DockerFile.jpg"/>
+```
 
+
+[root@master ~]# mkdir dockerfile
+[root@master ~]# cd dockerfile
+[root@master dockerfile]# cat Dockerfile
+FROM oraclelinux:8.4
+MAINTAINER testing@gmail.com
+RUN yum update -y && yum install httpd -y
+CMD ["apachectl","-D","FOREGROUND"]
+EXPOSE 80
+[root@master dockerfile]# docker build -t webserver:v1 .
+Installed:
+  apr-1.6.3-12.el8.x86_64
+  apr-util-1.6.1-6.el8.x86_64
+  httpd-2.4.37-51.0.1.module+el8.7.0+20778+02173b8e.x86_64
+  httpd-filesystem-2.4.37-51.0.1.module+el8.7.0+20778+02173b8e.noarch
+  httpd-tools-2.4.37-51.0.1.module+el8.7.0+20778+02173b8e.x86_64
+  mailcap-2.1.48-3.el8.noarch
+  mod_http2-1.15.7-5.module+el8.6.0+20548+01710940.x86_64
+  oracle-logos-httpd-84.5-1.0.1.el8.noarch
+
+Complete!
+Removing intermediate container 94f08889395f
+ ---> be2886caeb0b
+Step 4/5 : CMD ["apachectl","-D","FOREGROUND"]
+ ---> Running in e55cc09abedc
+Removing intermediate container e55cc09abedc
+ ---> 41fe60a57fe0
+Step 5/5 : EXPOSE 80
+ ---> Running in 80b25ba7060b
+Removing intermediate container 80b25ba7060b
+ ---> e57246fe29d5
+Successfully built e57246fe29d5
+Successfully tagged webserver:v1
+[root@master dockerfile]#
+
+
+
+[root@master dockerfile]# docker images
+REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+webserver     v1        e57246fe29d5   2 minutes ago    719MB
+
+```
 ### Check Resources ###
 ```
 $docker stats
