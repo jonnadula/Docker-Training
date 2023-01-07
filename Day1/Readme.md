@@ -173,4 +173,18 @@ CONTAINER ID   IMAGE             COMMAND   CREATED         STATUS         PORTS 
 8d16b59e4388   oraclelinux:8.4   "bash"    9 seconds ago   Up 7 seconds             srinic1
 [srini@master ~]$
 ```
-
+###Access running container using exec ####
+```
+[srini@master ~]$ docker exec -it srinic1  bash
+[root@8d16b59e4388 /]# pwd
+/
+[root@8d16b59e4388 /]# uname -r
+3.10.0-1160.81.1.el7.x86_64
+[root@8d16b59e4388 /]# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@8d16b59e4388 /]#
+[root@8d16b59e4388 /]# echo "hello" >abc.txt
+[root@8d16b59e4388 /]# ls
+abc.txt  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@8d16b59e4388 /]#
+```
