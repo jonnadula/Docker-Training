@@ -188,3 +188,17 @@ bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  s
 abc.txt  bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 [root@8d16b59e4388 /]#
 ```
+
+### Copy Data from container to host then host to container ###
+```
+[srini@master ~]$ docker ps
+CONTAINER ID   IMAGE             COMMAND   CREATED          STATUS          PORTS     NAMES
+8d16b59e4388   oraclelinux:8.4   "bash"    12 minutes ago   Up 12 minutes             srinic1
+[srini@master ~]$ ls
+[srini@master ~]$ pwd
+/home/srini
+[srini@master ~]$ docker cp srinic1:/abc.txt /home/srini
+[srini@master ~]$ ls
+abc.txt
+[srini@master ~]$
+``` 
