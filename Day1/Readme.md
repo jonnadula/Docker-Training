@@ -159,3 +159,18 @@ sha256
 97e22ab49eea70a5d500e00980537605d56f30f9614b3a6d6c4ae9ddbd642489
 [root@master sha256]#
 ```
+### Creating Container ###
+```
+[srini@master ~]$ docker images
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+oraclelinux   8.4       97e22ab49eea   14 months ago   246MB
+[srini@master ~]$
+
+[srini@master ~]$ docker run  -it -d  --name srinic1  oraclelinux:8.4 bash
+8d16b59e4388355237c1d99dcd0f95abad1f9f6732de50db2af6916d795f9d5f
+[srini@master ~]$ docker ps
+CONTAINER ID   IMAGE             COMMAND   CREATED         STATUS         PORTS     NAMES
+8d16b59e4388   oraclelinux:8.4   "bash"    9 seconds ago   Up 7 seconds             srinic1
+[srini@master ~]$
+```
+
