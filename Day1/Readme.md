@@ -95,5 +95,9 @@ Jan 07 14:01:51 master systemd[1]: Started Docker Application Container Engine.
 Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.498441691+05:30" level=info msg="API listen on /var/run/docker.sock"
 Hint: Some lines were ellipsized, use -l to show in full.
 [root@master ~]#
+
+[root@master ~]# systemctl enable docker
+Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service to /usr/lib/systemd/system/docker.service.
+[root@master ~]#
 ```
 
