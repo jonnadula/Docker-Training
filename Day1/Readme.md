@@ -495,6 +495,27 @@ root@70badbc7fa3d:/data# [root@master mydata]#
 abc.txt  def
 [root@master mydata]#
 ```
+### Docker Networking ###
+``` 
+Types of Network
+        1.Bridge      -  Private Network Internal to the host
+	2.Overlay     -  Enables networking across Multiple hosts
+        3.MACVLAN      - Useful for connecting to legacy applicatoins
+        4.Host
+	5.None
+
+listing bridges
+      [root@master mydata]# docker network ls
+               NETWORK ID     NAME      DRIVER    SCOPE
+               62c93dacdfec   bridge    bridge    local
+                42c396b4a776   host      host      local
+              2dda423ff989   none      null      local
+      [root@master mydata]#
+  
+Attach Container to the Network
+      $docker network connect my-new-bridge mybusybox
+ ```
+ 
 
 ### Troubleshooting Docker ###
 ```
