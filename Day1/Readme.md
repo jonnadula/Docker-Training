@@ -7,4 +7,5 @@
 <img src="Container vs VM1.jpg"/>
 
 ##Docker Architecture ##
+
 <img src="Docker Architecture.jpg"/>
