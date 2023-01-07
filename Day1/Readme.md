@@ -129,3 +129,32 @@ REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 oraclelinux   8.4       97e22ab49eea   14 months ago   246MB
 [srini@master ~]$
 ```
+
+### Docker DB ###
+[srini@master ~]$ docker  info   |   grep -i root
+WARNING: bridge-nf-call-iptables is disabled
+WARNING: bridge-nf-call-ip6tables is disabled
+ Docker Root Dir: /var/lib/docker
+[srini@master ~]$
+
+
+[root@master ~]# cd /var/lib/docker
+[root@master docker]# ls
+buildkit  containers  image  network  overlay2  plugins  runtimes  swarm  tmp  trust  volumes
+[root@master docker]# cd image
+[root@master image]# ls
+overlay2
+[root@master image]# cd overlay2
+[root@master overlay2]# ls
+distribution  imagedb  layerdb  repositories.json
+[root@master overlay2]# cd imagedb
+[root@master imagedb]# ls
+content  metadata
+[root@master imagedb]# cd content
+[root@master content]# ls
+sha256
+[root@master content]# cd sha256/
+[root@master sha256]# ls
+97e22ab49eea70a5d500e00980537605d56f30f9614b3a6d6c4ae9ddbd642489
+[root@master sha256]#
+```
