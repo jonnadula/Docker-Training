@@ -252,8 +252,6 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 <img src="DockerFile.jpg"/>
 ```
-
-
 [root@master ~]# mkdir dockerfile
 [root@master ~]# cd dockerfile
 [root@master dockerfile]# cat Dockerfile
@@ -287,13 +285,9 @@ Removing intermediate container 80b25ba7060b
 Successfully built e57246fe29d5
 Successfully tagged webserver:v1
 [root@master dockerfile]#
-
-
-
 [root@master dockerfile]# docker images
 REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
 webserver     v1        e57246fe29d5   2 minutes ago    719MB
-
 ```
 ### Check Resources ###
 ```
@@ -491,7 +485,6 @@ root@70badbc7fa3d:/data# [root@master mydata]#
 [root@master mydata]# ls
 abc.txt  def
 [root@master mydata]#
-
 ```
 
 
