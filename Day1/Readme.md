@@ -53,3 +53,7 @@ Installed size: 260 M
 Is this ok [y/d/N]: y
 Downloading packages:
 ```
+### Non cloud based linux vms ###
+[use_link](https://docs.docker.com/engine/install/rhel/)
+
+
