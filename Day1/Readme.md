@@ -131,6 +131,7 @@ oraclelinux   8.4       97e22ab49eea   14 months ago   246MB
 ```
 
 ### Docker DB ###
+```
 [srini@master ~]$ docker  info   |   grep -i root
 WARNING: bridge-nf-call-iptables is disabled
 WARNING: bridge-nf-call-ip6tables is disabled
