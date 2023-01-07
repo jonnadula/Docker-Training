@@ -260,7 +260,43 @@ d3f3b79b6ba5   webtest   0.12%     26.5MiB / 3.682GiB   0.70%     3.34kB / 13.9k
 ```
 
 ### pushing image to docker hub ###
+```
+[srini@master ~]$ docker image ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[srini@master ~]$ docker pull ubuntu
+Using default tag: latest
+latest: Pulling from library/ubuntu
+6e3729cf69e0: Pull complete
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Downloaded newer image for ubuntu:latest
+docker.io/library/ubuntu:latest
+[srini@master ~]$ docker image ls
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       latest    6b7dfa7e8fdb   4 weeks ago   77.8MB
+[srini@master ~]$
+ 
+[srini@master ~]$ docker  tag  ubuntu docker.io/jonnadula/ubuntu:v1
 
+[srini@master ~]$ docker login
+Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
+Username: jonnadula
+Password:
+WARNING! Your password will be stored unencrypted in /home/srini/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[srini@master ~]$
+
+[srini@master ~]$ docker push  docker.io/jonnadula/ubuntu:v1
+The push refers to repository [docker.io/jonnadula/ubuntu]
+6515074984c6: Mounted from library/ubuntu
+v1: digest: sha256:965fbcae990b0467ed5657caceaec165018ef44a4d2d46c7cdea80a9dff0d1ea size: 529
+[srini@master ~]$
+
+```
+
+ 
 
 ### Container Log ####
 
