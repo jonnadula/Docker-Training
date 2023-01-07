@@ -63,3 +63,37 @@ Downloading packages:
 	yum install -y docker-ce
 	yum install -y docker-ce
  ```
+ 
+ ### Start Docker ####
+ ```
+ [root@master ~]# systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: https://docs.docker.com
+[root@master ~]# systemctl start docker
+[root@master ~]# systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sat 2023-01-07 14:01:51 IST; 4s ago
+     Docs: https://docs.docker.com
+ Main PID: 1737 (dockerd)
+    Tasks: 8
+   Memory: 26.3M
+   CGroup: /system.slice/docker.service
+           └─1737 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.174700466+05:30" level=info msg="scheme \"unix\" not registered, ...ule=grpc
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.174717288+05:30" level=info msg="ccResolverWrapper: sending updat...ule=grpc
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.174726871+05:30" level=info msg="ClientConn switching balancer to...ule=grpc
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.190000182+05:30" level=info msg="Loading containers: start."
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.370152512+05:30" level=info msg="Default bridge (docker0) is assi...address"
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.442191457+05:30" level=info msg="Loading containers: done."
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.481430544+05:30" level=info msg="Docker daemon" commit=42c8b31 gr...20.10.22
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.481522668+05:30" level=info msg="Daemon has completed initialization"
+Jan 07 14:01:51 master systemd[1]: Started Docker Application Container Engine.
+Jan 07 14:01:51 master dockerd[1737]: time="2023-01-07T14:01:51.498441691+05:30" level=info msg="API listen on /var/run/docker.sock"
+Hint: Some lines were ellipsized, use -l to show in full.
+[root@master ~]#
+```
+
