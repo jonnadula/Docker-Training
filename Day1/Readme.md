@@ -56,4 +56,10 @@ Downloading packages:
 ### Non cloud based linux vms ###
 [use_link](https://docs.docker.com/engine/install/rhel/)
 
-
+```
+yum install -y yum-utils device-mapper-persistent-data lvm2
+	yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+	yum list docker-ce --showduplicates | sort -r
+	yum install -y docker-ce
+	yum install -y docker-ce
+ ```
