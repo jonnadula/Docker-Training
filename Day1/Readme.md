@@ -201,4 +201,15 @@ CONTAINER ID   IMAGE             COMMAND   CREATED          STATUS          PORT
 [srini@master ~]$ ls
 abc.txt
 [srini@master ~]$
+
+[srini@master ~]$ echo "hello world" > def.txt
+[srini@master ~]$ ls
+abc.txt  def.txt
+[srini@master ~]$ docker cp def.txt srinic1:/
+[srini@master ~]$ ls
+abc.txt  def.txt
+[srini@master ~]$ docker exec -it srinic1  bash
+[root@8d16b59e4388 /]# ls
+abc.txt  bin  boot  def.txt  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@8d16b59e4388 /]#
 ``` 
