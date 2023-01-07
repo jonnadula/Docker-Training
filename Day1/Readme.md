@@ -308,7 +308,98 @@ Two ways to Connect
 	2.Dynamic Port
 Example on Static Port
 
+[srini@master ~]$  docker run -d -p 8080:80 nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+3f4ca61aafcd: Pull complete
+50c68654b16f: Pull complete
+3ed295c083ec: Pull complete
+40b838968eea: Pull complete
+88d3ab68332d: Pull complete
+5f63362a3fa3: Pull complete
+Digest: sha256:0047b729188a15da49380d9506d65959cce6d40291ccfb4e039f5dc7efd33286
+Status: Downloaded newer image for nginx:latest
+063c4cdca64730eb41aab2ed46980776f2ddff6811aa0599ce1263e9912c7f42
+[srini@master ~]$
 
+[srini@master ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+063c4cdca647   nginx     "/docker-entrypoint.…"   15 seconds ago   Up 14 seconds   0.0.0.0:8080->80/tcp, :::8080->80/tcp   friendly_newton
+[srini@master ~]$
+
+[srini@master ~]$ curl http://192.168.211.128:8080
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[srini@master ~]$
+
+Example on Dynamic Port Forwarding
+
+[srini@master ~]$  docker run -d -P nginx
+6a212b6215c1ec2c6314bb6e9c9fed4bc5921db3c3ce9e862c0c19f9e482620a
+[srini@master ~]$ ls -ltr
+total 8
+-rw-r--r-- 1 srini srini  6 Jan  7 14:30 abc.txt
+-rw-rw-r-- 1 srini srini 12 Jan  7 14:42 def.txt
+drwxrwxr-x 2 srini srini 24 Jan  7 15:17 dockerfile
+[srini@master ~]$ docker images ls
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[srini@master ~]$ docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED       SIZE
+nginx              latest    1403e55ab369   2 weeks ago   142MB
+jonnadula/ubuntu   v1        6b7dfa7e8fdb   4 weeks ago   77.8MB
+ubuntu             latest    6b7dfa7e8fdb   4 weeks ago   77.8MB
+[srini@master ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                     NAMES
+6a212b6215c1   nginx     "/docker-entrypoint.…"   28 seconds ago   Up 27 seconds   0.0.0.0:32769->80/tcp, :::32769->80/tcp   frosty_snyder
+063c4cdca647   nginx     "/docker-entrypoint.…"   2 minutes ago    Up 2 minutes    0.0.0.0:8080->80/tcp, :::8080->80/tcp     friendly_newton
+[srini@master ~]$
+
+[srini@master ~]$ curl http://192.168.211.128:32769
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+[srini@master ~]$
 
 #### Docker Volumes ####
 
