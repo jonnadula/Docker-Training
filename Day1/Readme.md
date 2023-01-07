@@ -503,9 +503,6 @@ Types of Network
         3.MACVLAN      - Useful for connecting to legacy applicatoins
         4.Host
 	5.None
-```
-<img src="Network.jpg"/>
-```
 listing bridges
       [root@master mydata]# docker network ls
                NETWORK ID     NAME      DRIVER    SCOPE
@@ -516,8 +513,9 @@ listing bridges
   
 Attach Container to the Network
       $docker network connect my-new-bridge mybusybox
+
  ```
- 
+  <img src="Network.jpg"/>
 
 ### Troubleshooting Docker ###
 ```
