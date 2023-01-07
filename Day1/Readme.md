@@ -402,6 +402,53 @@ Commercial support is available at
 [srini@master ~]$
 ```
 #### Docker Volumes ####
+```
+[root@master ~]# docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+6e3729cf69e0: Pull complete
+Digest: sha256:27cb6e6ccef575a4698b66f5de06c7ecd61589132d5a91d098f7f3f9285415a9
+Status: Downloaded newer image for ubuntu:latest
+root@d8f286a15abf:/# mkdir /data
+root@d8f286a15abf:/# cd /data
+root@d8f286a15abf:/data# ls
+root@d8f286a15abf:/data# touch abc.txt
+root@d8f286a15abf:/data# ls
+abc.txt
+root@d8f286a15abf:/data#
 
+[root@master ~]# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
+ubuntu       latest    6b7dfa7e8fdb   4 weeks ago   77.8MB
+[root@master ~]# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED         STATUS         PORTS     NAMES
+d8f286a15abf   ubuntu    "bash"    2 minutes ago   Up 2 minutes             kind_raman
+[root@master ~]#
+
+[root@master ~]# docker stop d8f286a15abf
+d8f286a15abf
+[root@master ~]# docker rm d8f286a15abf
+d8f286a15abf
+[root@master ~]# docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[root@master ~]#
+
+[root@master ~]# mkdir /mydata
+[root@master ~]# cd /mydata
+[root@master mydata]# touch abc.txt
+[root@master mydata]#
+[root@master mydata]# docker run -it -v /mydata:/data ubuntu bash
+root@70badbc7fa3d:/# cd /data
+root@70badbc7fa3d:/data# ls
+abc.txt
+root@70badbc7fa3d:/data#
+root@70badbc7fa3d:/data# touch def
+root@70badbc7fa3d:/data# [root@master mydata]#
+[root@master mydata]# cd /mydata
+[root@master mydata]# ls
+abc.txt  def
+[root@master mydata]#
+
+```
 
 
