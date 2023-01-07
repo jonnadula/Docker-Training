@@ -337,6 +337,14 @@ v1: digest: sha256:965fbcae990b0467ed5657caceaec165018ef44a4d2d46c7cdea80a9dff0d
 ```
 
 ### Container Logs ####
+```
+1.Show the last 5 lines from the container log
+         $docker logs --tail 5 <container ID>
+	 
+2.Show the last 5 lines and follow the log
+        $docker logs --tail 5 -f <container ID>
+
+```
 
 
 ### Understanding Port Forwarding ###
