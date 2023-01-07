@@ -9,3 +9,5 @@
 ### Docker Architecture ##
 
 <img src="Docker Architecture.jpg"/>
+
+### Installing Docker ##
