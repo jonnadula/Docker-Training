@@ -250,7 +250,9 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 		.docker
 	9.Docker commands are written in upper case,Args in lower case
 ```
+
 <img src="DockerFile.jpg"/>
+
 ```
 [root@master ~]# mkdir dockerfile
 [root@master ~]# cd dockerfile
@@ -289,6 +291,7 @@ Successfully tagged webserver:v1
 REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
 webserver     v1        e57246fe29d5   2 minutes ago    719MB
 ```
+
 ### Check Resources ###
 ```
 $docker stats
@@ -332,8 +335,6 @@ v1: digest: sha256:965fbcae990b0467ed5657caceaec165018ef44a4d2d46c7cdea80a9dff0d
 [srini@master ~]$
 
 ```
-
- 
 
 ### Container Logs ####
 
