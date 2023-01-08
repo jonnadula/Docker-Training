@@ -9,7 +9,7 @@
 ### Use Cases ###
 <img src="usecase1.png"/>
 
-<img src="usecase1.png"/>
+<img src="usecase2.png"/>
 
 ### Docker Architecture ##
 
