@@ -1,6 +1,14 @@
 ### Opearting System ##
 <img src="os.png"/>
 
+### Installing Operating System ###
+```
+	1.Barmetal
+	2.Cloud Computing
+	3.Virtualiation
+	4.Containeization
+```
+
 ### VM vs Container ##
 <img src="Container vs VM.jpg"/>
 
