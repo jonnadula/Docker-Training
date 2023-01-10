@@ -72,7 +72,7 @@ Downloading packages:
 	yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 	yum list docker-ce --showduplicates | sort -r
 	yum install -y docker-ce
-	yum install -y docker-ce
+	
  ```
  
  ### Start Docker ####
