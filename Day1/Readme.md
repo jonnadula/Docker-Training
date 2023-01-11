@@ -349,11 +349,14 @@ v1: digest: sha256:965fbcae990b0467ed5657caceaec165018ef44a4d2d46c7cdea80a9dff0d
 
 ### Container Logs ####
 ```
-1.Show the last 5 lines from the container log
-         $docker logs --tail 5 <container ID>
-	 
-2.Show the last 5 lines and follow the log
-        $docker logs --tail 5 -f <container ID>
+$docker logs [-f|--follow[=false]][-t|--timestamps[=false]] CONTAINER
+$docker container logs [OPTIONS] CONTAINER
+$docker logs —f ${CONTAINER} 
+$docker logs -t ${CONTAINER}
+$docker logs --tail 50 --follow --timestamps <container_name>
+$docker logs --tail 5 <container ID> (Show the last 5 lines from the container log)
+$docker logs --tail 5 -f <container ID> (Show the last 5 lines and follow the log)
+$docker container logs --tail=10 tender_nobe1 (Shows only last 10 log entries)
 
 ```
 
