@@ -119,7 +119,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 [root@master ~]# echo "welcome1"  |  passwd srini --stdin
 Changing password for user srini.
 passwd: all authentication tokens updated successfully.
-[root@master ~]#
+[root@master ~]#chmod 666 /var/run/docker.sock
 ```
 
 ### Docker Operations ###
